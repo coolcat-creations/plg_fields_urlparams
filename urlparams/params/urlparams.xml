@@ -24,6 +24,8 @@
 			>
 				<option value="hidden">JNO</option>
 				<option value="">JYES</option>
+				<option value="global">PLG_FIELDS_PARAM_URLPARAM_GLOBAL</option>
+
 			</field>
 
 			<field

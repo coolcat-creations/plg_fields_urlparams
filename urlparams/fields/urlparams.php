@@ -24,8 +24,9 @@ class JFormFieldUrlparams extends JFormFieldText {
 		{
 			$urlParam = '';
 			$fieldUrlParam = (string) $element['urlparam'];
+			$displayfield = (string) $element['displayfield'];
 
-			if ($fieldUrlParam == '') {
+			if ($fieldUrlParam == '' || $displayfield == 'global') {
 				$plugin = JPluginHelper::getPlugin('fields', 'urlparams');
 				if ($plugin)
 				{
@@ -35,7 +36,6 @@ class JFormFieldUrlparams extends JFormFieldText {
 				}
 			} else {
 				$urlParam = $fieldUrlParam;
-				$displayfield = (string) $element['displayfield'];
 			}
 
 			$matchFound = (array_key_exists($urlParam, $_GET)) && trim(!empty($_GET[$urlParam]));
