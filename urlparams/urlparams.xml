@@ -19,6 +19,8 @@
 	<language folder="language">
 		<language tag="en-GB">en-GB.plg_fields_urlparams.ini</language>
 		<language tag="en-GB">en-GB.plg_fields_urlparams.sys.ini</language>
+		<language tag="de-DE">de-DE.plg_fields_urlparams.ini</language>
+		<language tag="de-DE">de-DE.plg_fields_urlparams.sys.ini</language>
 	</language>
 	<config>
 		<fields name="params">
