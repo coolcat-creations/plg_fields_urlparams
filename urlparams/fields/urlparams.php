@@ -24,7 +24,8 @@ class JFormFieldUrlparams extends JFormFieldText {
 		{
 			$urlParam = '';
 			$fieldUrlParam = (string) $element['urlparam'];
-
+			$displayfield = (string) $element['displayfield'];
+			
 			if ($fieldUrlParam == '') {
 				$plugin = JPluginHelper::getPlugin('fields', 'urlparams');
 				if ($plugin)
@@ -47,7 +48,14 @@ class JFormFieldUrlparams extends JFormFieldText {
 
 			$paramvalue = strip_tags(trim($paramvalue));
 
-			$element['class'] = 'address-input';
+			$element['class'] = $displayfield;
+			$element['type'] = $displayfield;
+
+			/*if ($displayfield == 'hidden') {
+			$element['label'] = '';
+			}*/
+
+
 			$return = parent::setup($element, $paramvalue, $group);
 			return $return;
 		}

@@ -37,6 +37,17 @@
 				       label="URL Param"
 				       description="PLG_FIELDS_PARAM_URLPARAM_DESC"
 				       filter="raw"/>
+
+				<field
+						name="displayfield"
+						label="PLG_FIELDS_PARAM_URLPARAM_DISPLAYFIELD"
+						type="radio"
+						default=""
+				>
+					<option value="hidden">JNO</option>
+					<option value="">JYES</option>
+				</field>
+
 				<field
 						name="hidedonation"
 						label="PLG_FIELDS_PARAM_URLPARAM_DONATEHIDE"
