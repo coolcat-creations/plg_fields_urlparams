@@ -45,6 +45,8 @@ class JFormFieldUrlparams extends JFormFieldText {
 				$paramvalue = $_GET[$urlParam];
 			}
 
+			$paramvalue = strip_tags(trim($paramvalue));
+
 			$element['class'] = 'address-input';
 			$return = parent::setup($element, $paramvalue, $group);
 			return $return;
