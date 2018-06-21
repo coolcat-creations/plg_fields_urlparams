@@ -13,7 +13,7 @@ jimport('joomla.form.formfield');
 JLoader::import('components.com_fields.libraries.fieldsplugin', JPATH_ADMINISTRATOR);
 
 
-class JFormFieldUrlparams extends JFormFieldText {
+class JFormFieldUrlparams extends JFormField {
 
 	protected $type = 'Urlparams';
 
@@ -49,13 +49,7 @@ class JFormFieldUrlparams extends JFormFieldText {
 
 			$paramvalue = strip_tags(trim($paramvalue));
 
-			$element['class'] = $displayfield;
 			$element['type'] = $displayfield;
-
-			/*if ($displayfield == 'hidden') {
-			$element['label'] = '';
-			}*/
-
 
 			$return = parent::setup($element, $paramvalue, $group);
 			return $return;
