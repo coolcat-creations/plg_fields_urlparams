@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="plugin" version="3.7.0" group="fields" method="upgrade">
+	<name>plg_fields_urlparams</name>
+	<author>Elisa Foltyn</author>
+	<creationDate>25-05-2018</creationDate>
+	<copyright>COOLCAT creations, Elisa Foltyn</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>joomla@coolcat-creations.com</authorEmail>
+	<authorUrl>www.coolcat-creations.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_FIELDS_URLPARAMS_DESC</description>
+	<files>
+		<filename plugin="urlparams">urlparams.php</filename>
+		<folder>fields</folder>
+		<folder>language</folder>
+		<folder>params</folder>
+		<folder>tmpl</folder>
+	</files>
+	<language folder="language">
+		<language tag="en-GB">en-GB.plg_fields_urlparams.ini</language>
+		<language tag="en-GB">en-GB.plg_fields_urlparams.sys.ini</language>
+	</language>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+						name="donationcode"
+						label="PLG_FIELDS_PARAM_URLPARAM_DONATE"
+						type="spacer"
+						showon="hidedonation:show"/>
+
+				<field name="urlparam"
+				       type="text"
+				       default="subject"
+				       label="URL Param"
+				       description="PLG_FIELDS_PARAM_URLPARAM_DESC"
+				       filter="raw"/>
+				<field
+						name="hidedonation"
+						label="PLG_FIELDS_PARAM_URLPARAM_DONATEHIDE"
+						type="radio"
+						default="show"
+				>
+					<option value="show">JNO</option>
+					<option value="hide">JYES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension" priority="1" name="URL Params Joomla! Custom Field Update Site">https://raw.githubusercontent.com/coolcat-creations/plg_fields_urlparams/master/manifest.xml</server>
+	</updateservers>
+</extension>

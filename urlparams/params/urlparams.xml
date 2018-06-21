@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="fieldparams">
+		<fieldset name="fieldparams">
+
+			<field
+					name="donationcode"
+					label="PLG_FIELDS_PARAM_URLPARAM_DONATE"
+					type="spacer"
+					showon="hidedonation:show"/>
+
+			<field name="urlparam"
+					type="text"
+					default=""
+					label="URL Param"
+					description="PLG_FIELDS_PARAM_URLPARAM_DESC"
+					filter="raw"/>
+
+			<field
+					name="hidedonation"
+					label="PLG_FIELDS_PARAM_URLPARAM_DONATEHIDE"
+					type="radio"
+					default="show"
+			>
+				<option value="show">JNO</option>
+				<option value="hide">JYES</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>
