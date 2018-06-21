@@ -13,7 +13,7 @@ jimport('joomla.form.formfield');
 JLoader::import('components.com_fields.libraries.fieldsplugin', JPATH_ADMINISTRATOR);
 
 
-class JFormFieldUrlparams extends JFormField {
+class JFormFieldUrlparams extends JFormFieldText {
 
 	protected $type = 'Urlparams';
 
