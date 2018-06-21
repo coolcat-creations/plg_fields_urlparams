@@ -24,17 +24,18 @@ class JFormFieldUrlparams extends JFormFieldText {
 		{
 			$urlParam = '';
 			$fieldUrlParam = (string) $element['urlparam'];
-			$displayfield = (string) $element['displayfield'];
-			
+
 			if ($fieldUrlParam == '') {
 				$plugin = JPluginHelper::getPlugin('fields', 'urlparams');
 				if ($plugin)
 				{
 					$params = new JRegistry($plugin->params);
 					$urlParam = $params->get('urlparam','subject');
+					$displayfield = $params->get('displayfield','');
 				}
 			} else {
 				$urlParam = $fieldUrlParam;
+				$displayfield = (string) $element['displayfield'];
 			}
 
 			$matchFound = (array_key_exists($urlParam, $_GET)) && trim(!empty($_GET[$urlParam]));
