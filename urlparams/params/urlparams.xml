@@ -2,19 +2,32 @@
 <form>
 	<fields name="fieldparams">
 		<fieldset name="fieldparams">
-
 			<field
 					name="donationcode"
 					label="PLG_FIELDS_PARAM_URLPARAM_DONATE"
 					type="spacer"
-					showon="hidedonation:show"/>
+					showon="hidedonation:show"
+			/>
 
 			<field name="urlparam"
 					type="text"
 					default=""
 					label="URL Param"
 					description="PLG_FIELDS_PARAM_URLPARAM_DESC"
-					filter="raw"/>
+					filter="raw"
+			/>
+
+			<field
+					name="readonly"
+					type="radio"
+					default=""
+					label="PLG_FIELDS_PARAM_URLPARAM_READONLY"
+					description="PLG_FIELDS_PARAM_URLPARAM_READONLY_DESC"
+			>
+				<option value="">JNO</option>
+				<option value="readonly">JYES</option>
+				<option value="global">PLG_FIELDS_PARAM_URLPARAM_GLOBAL</option>
+			</field>
 
 			<field
 					name="displayfield"
@@ -25,17 +38,17 @@
 				<option value="hidden">JNO</option>
 				<option value="">JYES</option>
 				<option value="global">PLG_FIELDS_PARAM_URLPARAM_GLOBAL</option>
-
 			</field>
 
 			<field
 					name="hidedonation"
 					label="PLG_FIELDS_PARAM_URLPARAM_DONATEHIDE"
 					type="radio"
-					default="show"
+					default=""
 			>
 				<option value="show">JNO</option>
-				<option value="hide">JYES</option>
+				<option value="">JYES</option>
+
 			</field>
 		</fieldset>
 	</fields>
