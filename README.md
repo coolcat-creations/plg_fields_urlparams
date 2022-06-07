@@ -1,5 +1,5 @@
 # plg_fields_urlparams
-Creates a textfield that retrieves the value from the url parameter
+Creates a textfield that retrieves the value from the url parameter (only for Joomla 3!)
 
 # usage
 You can use this field for example in your user registration or in your contact form.
